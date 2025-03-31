@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
-function Square({ value }) {
-  return <button className='square'>{value}</button>
+function Square({ value, onSquareClick }) {
+  return <button className="square" onClick={onSquareClick}>
+    {value}
+  </button>
 }
 
 export default function Board() {
@@ -10,7 +12,7 @@ export default function Board() {
   return (
     <>
       <div className="board-row">
-        <Square value={squares[0]} />
+        <Square value={squares[0]} onSquareClick={handleClick} />
         <Square value={squares[1]} />
         <Square value={squares[2]} />
       </div>
