@@ -62,6 +62,10 @@ export default function Game() {
     setXIsNext(!xIsNext);
   }
 
+  function jumpTo(nextMove) {
+    // TODO
+  }
+
   return (
     <div className='game'>
       <div className='game-board'>
